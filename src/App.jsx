@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const questions = [
   {
     question: "What is React?",
@@ -26,6 +28,10 @@ const questions = [
   },
 ];
 const App = () => {
+    const [addquestion, Setaddquestion]=useState(0);
+    console.log(addquestion);
+    
+    
   return (
     <div>
       <div className="flex justify-center">
@@ -44,7 +50,10 @@ const App = () => {
         ))}
       </div>
       <div>
-        <button className="text-green-600 bg-amber-300 p-0.5 rounded shadow-2xl font-bold">Next</button>
+        <button onClick={()=>SetaddQuestion(addquestionquestion+1)} className="text-green-600
+         bg-amber-300 p-0.5 rounded 
+        shadow-2xl font-bold">Next</button>
+        <p>{question}</p>
       </div>
     </div>
   );
