@@ -28,10 +28,9 @@ const questions = [
   },
 ];
 const App = () => {
-    const [addquestion, Setaddquestion]=useState(0);
-    console.log(addquestion);
-    
-    
+  const [displayquestion, Setdisplayquestion] = useState(0);
+  const [score, Setscore] = useState(0);
+
   return (
     <div>
       <div className="flex justify-center">
@@ -43,17 +42,43 @@ const App = () => {
         {questions.map((items, index) => (
           <div key={index}>
             {items.question}
-            <div>{items.options.map((options,index)=>(
+            <div>
+              {items.options.map((options, index) => (
                 <p key={index}>{options}</p>
-            ))}</div>
+              ))}
+            </div>
           </div>
         ))}
       </div>
       <div>
-        <button onClick={()=>SetaddQuestion(addquestionquestion+1)} className="text-green-600
+        <button
+          onClick={() => Setdisplayquestion(displayquestion + 1)}
+          className="text-green-600
          bg-amber-300 p-0.5 rounded 
-        shadow-2xl font-bold">Next</button>
-        <p>{question}</p>
+        shadow-2xl font-bold"
+        >
+          Next
+        </button>
+        <div>
+          <p className="text-[5px]">{questions[displayquestion].question}</p>
+          {questions[displayquestion].options.map((options, index) => (
+            <button
+              onClick={() => {
+                if (options === questions[displayquestion].answer) {
+                  Setscore(score + 1);
+                  console.log("Correct");
+                } else {
+                  console.log("Wrong");
+                }
+              }}
+              className="text-[5px]"
+              key={index}
+            >
+              {options}
+            </button>
+          ))}
+          <h1 className="text-xl ">{score}</h1>
+        </div>
       </div>
     </div>
   );
