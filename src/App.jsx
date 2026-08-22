@@ -72,7 +72,7 @@ const App = () => {
 
       <div className="w-full max-w-md">
 
-        {/* Header */}
+       
         <div className="text-center mb-6">
           <h1 className="text-4xl font-extrabold text-white">
             Quiz<span className="text-purple-500">App</span>
@@ -83,12 +83,12 @@ const App = () => {
           </p>
         </div>
 
-        {/* Quiz Card */}
+      
         <div className="bg-white rounded-3xl shadow-2xl p-6">
 
           {quizFinished ? (
 
-            /* Final Screen */
+            
             <div className="text-center py-8">
 
               <div className="text-6xl mb-4">
@@ -130,10 +130,10 @@ const App = () => {
 
           ) : (
 
-            /* Question Screen */
+           
             <div>
 
-              {/* Question Number */}
+       
               <div className="flex justify-between items-center mb-3">
 
                 <span className="text-sm font-semibold text-purple-600">
@@ -146,7 +146,7 @@ const App = () => {
 
               </div>
 
-              {/* Progress Bar */}
+          
               <div className="w-full bg-slate-200 rounded-full h-2 mb-6">
                 <div
                   className="bg-purple-600 h-2 rounded-full transition-all duration-300"
@@ -154,12 +154,12 @@ const App = () => {
                 ></div>
               </div>
 
-              {/* Question */}
+       
               <h2 className="text-2xl font-bold text-slate-800 leading-snug">
                 {questions[currentQuestion].question}
               </h2>
 
-              {/* Options */}
+             
               <div className="mt-6 space-y-3">
 
                 {questions[currentQuestion].options.map(
@@ -191,7 +191,7 @@ const App = () => {
 
               </div>
 
-              {/* Answer Result */}
+            
               {correctAnswer && (
                 <div
                   className={`mt-5 p-3 rounded-xl text-center font-bold ${
@@ -204,7 +204,7 @@ const App = () => {
                 </div>
               )}
 
-              {/* Score */}
+           
               <div className="flex justify-between items-center mt-6">
 
                 <span className="text-slate-500">
@@ -217,7 +217,7 @@ const App = () => {
 
               </div>
 
-              {/* Next Button */}
+            
               {selectedAnswer && (
                 <button
                   onClick={nextQuestion}
