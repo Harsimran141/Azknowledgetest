@@ -66,34 +66,35 @@ const App = () => {
   const [selectOption, SetselectOption] = useState(false);
   const [correct, SetCorrect] = useState(null);
   return (
-    <div className="bg-green-200 w-[800px] h-[800px] 
-    rounded-2xl p-8 mt-10 mx-auto shadow-lg">
+    <div
+      className="bg-green-200 w-[800px] h-[800px] 
+    rounded-2xl p-8 mt-10 mx-auto shadow-lg"
+    >
       <div className="flex justify-center">
         <h1 className="text-3xl text-blue-600 font-bold text-center mb-8">
           PRACTICE QUESTION CLASS A WRITTEN TEST
         </h1>
-        
-      </div >
-      <div className=" flex justify-center mt-2 text-2xl py-2 px-2 bg-amber-100 font-bold ">
-
-        <p> Question No: {currentQuestion}</p>
-        </div>
+      </div>
+      <div className=" flex rounded-2xl justify-center mt-2 text-2xl py-2 px-2 bg-amber-100 font-bold ">
+        <p> Question No: {currentQuestion + 1}</p>
+      </div>
       <div>
-        <h2 className="flex flex-col text-xl  text-orange-800 gap-3">{questions[currentQuestion].question}</h2>
+        <h2 className="flex flex-col text-xl  text-orange-800 gap-3">
+          {questions[currentQuestion].question}
+        </h2>
       </div>
       <div className="flex flex-col gap-3">
         {questions[currentQuestion].options.map((items, index) => (
           <button
-            onClick={()=>{SetselectOption(items)
-            if(items === questions[currentQuestion].Answer){
-                 SetCorrect("Correct ")
-            }else{
-              SetCorrect("Wrong")
-            }
-                            
-              
+            onClick={() => {
+              SetselectOption(items);
+              if (items === questions[currentQuestion].Answer) {
+                SetCorrect("Correct ");
+              } else {
+                SetCorrect("Wrong");
+              }
             }}
-            key={index} 
+            key={index}
             className="w-full text-left p-3  bg-white border border-gray-300 rounded-lg hover:bg-blue-600"
           >
             {items}
@@ -101,8 +102,7 @@ const App = () => {
         ))}
 
         <button
-        className="mt-6 bg-blue-600 font-bold px-6 py-2 rounded-lg hover:bg-blue-800 text-white "
-          
+          className="mt-6 bg-blue-600 font-bold px-6 py-2 rounded-lg hover:bg-blue-800 text-white "
           onClick={() => {
             if (currentQuestion === questions.length - 1) {
               setCurrentQuestion(0);
@@ -113,11 +113,9 @@ const App = () => {
         >
           Next
         </button>
-        
+
         <h1 className="text-xl font-bold mt-5">{correct}</h1>
-        <div className="text-lg mt-3">
-          {selectOption}
-        </div>
+        <div className="text-lg mt-3">{selectOption}</div>
       </div>
     </div>
   );
