@@ -89,9 +89,14 @@ const App = () => {
         {questions[currentQuestion].options.map((items, index) => (
           <button 
             onClick={() => {
+              if(answered)
+                return;
               SetselectOption(items);
+              SetCorrect(true);
               if (items === questions[currentQuestion].Answer) {
-               SetCorrect("Correct");
+              
+              SetCorrect("Correct");
+             
                SetScore(score+1)
               } else {
                 SetCorrect("Wrong");
