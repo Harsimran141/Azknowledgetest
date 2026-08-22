@@ -65,6 +65,8 @@ const App = () => {
   const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectOption, SetselectOption] = useState(false);
   const [correct, SetCorrect] = useState(null);
+  const [score, SetScore] = useState(0);
+  const [answered, Setanswered] = useState(false);
   return (
     <div
       className="bg-green-200 w-[800px] h-[800px] 
@@ -89,8 +91,8 @@ const App = () => {
             onClick={() => {
               SetselectOption(items);
               if (items === questions[currentQuestion].Answer) {
-               
-                SetCorrect("Correct ");
+               SetCorrect("Correct");
+               SetScore(score+1)
               } else {
                 SetCorrect("Wrong");
               }
@@ -121,6 +123,7 @@ const App = () => {
 
         <h1 className= {`text-4xl font-bold mt-5 ${correct === "Correct" ? "text-green-600" : " text-red-600"}`}>{correct}</h1>
         <div className="text-4xl font-bold mt-5">{selectOption}</div>
+        <div> Current Score = {score}</div>
       </div>
     </div>
   );
