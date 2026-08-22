@@ -66,13 +66,18 @@ const App = () => {
   const [selectOption, SetselectOption] = useState(false);
   const [correct, SetCorrect] = useState(null);
   return (
-    <div className="bg-green-200 w-[800px] h-[600px] 
+    <div className="bg-green-200 w-[800px] h-[800px] 
     rounded-2xl p-8 mt-10 mx-auto shadow-lg">
       <div className="flex justify-center">
         <h1 className="text-3xl text-blue-600 font-bold text-center mb-8">
           PRACTICE QUESTION CLASS A WRITTEN TEST
         </h1>
-      </div>
+        
+      </div >
+      <div className=" flex justify-center mt-2 text-2xl py-2 px-2 bg-amber-100 font-bold ">
+
+        <p> Question No: {currentQuestion}</p>
+        </div>
       <div>
         <h2 className="flex flex-col text-xl  text-orange-800 gap-3">{questions[currentQuestion].question}</h2>
       </div>
@@ -108,7 +113,7 @@ const App = () => {
         >
           Next
         </button>
-        <p>{currentQuestion}</p>
+        
         <h1 className="text-xl font-bold mt-5">{correct}</h1>
         <div className="text-lg mt-3">
           {selectOption}
