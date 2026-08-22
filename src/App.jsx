@@ -85,17 +85,22 @@ const App = () => {
       </div>
       <div className="flex flex-col gap-3">
         {questions[currentQuestion].options.map((items, index) => (
-          <button
+          <button 
             onClick={() => {
               SetselectOption(items);
               if (items === questions[currentQuestion].Answer) {
+               
                 SetCorrect("Correct ");
               } else {
                 SetCorrect("Wrong");
               }
             }}
             key={index}
-            className="w-full text-left p-3  bg-white border border-gray-300 rounded-lg hover:bg-blue-600"
+            className={`w-full text-left p-3 
+              bg-white border border-gray-300 rounded-lg hover:bg-blue-600 
+              ${items === selectOption ? "text-red-400" : "text-black"}
+            `}
+             
           >
             {items}
           </button>
@@ -114,8 +119,8 @@ const App = () => {
           Next
         </button>
 
-        <h1 className="text-xl font-bold mt-5">{correct}</h1>
-        <div className="text-lg mt-3">{selectOption}</div>
+        <h1 className= {`text-4xl font-bold mt-5 ${correct === "Correct" ? "text-green-600" : " text-red-600"}`}>{correct}</h1>
+        <div className="text-4xl font-bold mt-5">{selectOption}</div>
       </div>
     </div>
   );
