@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 const App = () =>{
   const questions = [
   {
@@ -56,12 +58,15 @@ const App = () =>{
     },
   }
   ];
+const [currentQuestion, setCurrentQuestion] = useState(0);
   return(
-    <div className="bg-green-200 w-48 h-48">
-      <div>
-      <h1>Truck A Knowledge Test</h1>
+    <div className="bg-green-200 w-[800px] h-[600px] rounded mt-10 mx-auto">
+      <div className="flex justify-center">
+      <h1 className="text-2xl text-blue-600 font-bold mt-5">Truck A Knowledge Test</h1>
       </div>
-
+       <h1>
+        {questions[0].question}
+       </h1>
     </div>
   )
 }
