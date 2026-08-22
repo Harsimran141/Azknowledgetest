@@ -67,6 +67,9 @@ const [currentQuestion, setCurrentQuestion] = useState(0);
        <h1>
         {questions[0].question}
        </h1>
+       <div>
+        {questions}
+       </div>
     </div>
   )
 }
