@@ -1,241 +1,68 @@
-import { useState } from "react";
-
-const App = () => {
+const App = () =>{
   const questions = [
-    {
-      question: "What is the capital of Canada?",
-      options: ["Toronto", "Ottawa", "Vancouver", "Montreal"],
-      answer: "Ottawa",
+  {
+    "id": 1,
+    "type": "multiple_choice",
+    "question": "How can you ensure that the vehicle has passed an annual inspection?",
+    "options": {
+      "a": "A valid inspection sticker is attached to the vehicle",
+      "b": "Does not require proof",
+      "c": "As stated by the operator",
+      "d": "Has to be forwarded to MTO (Ministry of Transportation)"
+    }
+  },
+  {
+    "id": 2,
+    "type": "multiple_choice",
+    "question": "A police or appointed ministry officer has the authority to perform a safety inspection:",
+    "options": {
+      "a": "Only at an inspection station",
+      "b": "At any time and any location",
+      "c": "Only on public roadway",
+      "d": "During daylight hours only"
+    }
+  },
+  {
+    "id": 3,
+    "type": "multiple_choice",
+    "question": "A properly completed daily inspection report contains:",
+    "options": {
+      "a": "Appropriate schedule",
+      "b": "Daily log",
+      "c": "The signature of the driver or person completing the report",
+      "d": "Delivery schedule"
+    }
+  },
+  {
+    "id": 4,
+    "type": "multiple_choice",
+    "question": "You must ensure that the following items are secure on the vehicle:",
+    "options": {
+      "a": "Only items being transported for paid compensation",
+      "b": "The entire load including items such as gas cans and wheel chocks",
+      "c": "Only the load and direct attachments",
+      "d": "None, load security is the responsibility of operator not driver"
+    }
+  },
+  {
+    "id": 5,
+    "type": "multiple_choice",
+    "question": "A front tire fails an inspection if the tread on two adjacent grooves anywhere on the tire are:",
+    "options": {
+      "a": "Less than 1.5 millimetres (0.06 inches)",
+      "b": "Less than 3 millimetres (0.12 inches)",
+      "c": "Less than 6 millimetres (0.24 inches)",
+      "d": "Less than 15 millimetres (0.59 inches)"
     },
-    {
-      question: "What is the capital of India?",
-      options: ["Mumbai", "New Delhi", "Chennai", "Kolkata"],
-      answer: "New Delhi",
-    },
-    {
-      question: "What is the capital of Australia?",
-      options: ["Sydney", "Melbourne", "Canberra", "Brisbane"],
-      answer: "Canberra",
-    },
-    {
-      question: "What is the capital of Japan?",
-      options: ["Kyoto", "Osaka", "Tokyo", "Hiroshima"],
-      answer: "Tokyo",
-    },
-    {
-      question: "What is the capital of France?",
-      options: ["Lyon", "Paris", "Nice", "Marseille"],
-      answer: "Paris",
-    },
+  }
   ];
-
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [correctAnswer, setCorrectAnswer] = useState(null);
-  const [score, setScore] = useState(0);
-  const [quizFinished, setQuizFinished] = useState(false);
-  const [selectedAnswer, setSelectedAnswer] = useState(null);
-
-  const handleAnswer = (item) => {
-    setSelectedAnswer(item);
-
-    if (item === questions[currentQuestion].answer) {
-      setCorrectAnswer("Correct Answer");
-      setScore((prevScore) => prevScore + 1);
-    } else {
-      setCorrectAnswer("Wrong Answer");
-    }
-  };
-
-  const nextQuestion = () => {
-    if (currentQuestion === questions.length - 1) {
-      setQuizFinished(true);
-    } else {
-      setCurrentQuestion((prevQuestion) => prevQuestion + 1);
-      setSelectedAnswer(null);
-      setCorrectAnswer(null);
-    }
-  };
-
-  const restartQuiz = () => {
-    setCurrentQuestion(0);
-    setCorrectAnswer(null);
-    setScore(0);
-    setQuizFinished(false);
-    setSelectedAnswer(null);
-  };
-
-  const progress =
-    ((currentQuestion + 1) / questions.length) * 100;
-
-  return (
-    <div className="min-h-screen bg-slate-950 flex items-center justify-center p-4">
-
-      <div className="w-full max-w-md">
-
-       
-        <div className="text-center mb-6">
-          <h1 className="text-4xl font-extrabold text-white">
-            Quiz<span className="text-purple-500">App</span>
-          </h1>
-
-          <p className="text-slate-400 mt-2">
-            Test your general knowledge
-          </p>
-        </div>
-
-      
-        <div className="bg-white rounded-3xl shadow-2xl p-6">
-
-          {quizFinished ? (
-
-            
-            <div className="text-center py-8">
-
-              <div className="text-6xl mb-4">
-                🏆
-              </div>
-
-              <h2 className="text-3xl font-bold text-slate-800">
-                Quiz Finished!
-              </h2>
-
-              <p className="text-slate-500 mt-2">
-                Great job! Here is your final score.
-              </p>
-
-              <div className="bg-purple-50 rounded-2xl p-6 mt-6">
-
-                <p className="text-slate-500">
-                  Your Score
-                </p>
-
-                <h3 className="text-4xl font-extrabold text-purple-600 mt-2">
-                  {score} / {questions.length}
-                </h3>
-
-                <p className="text-slate-500 mt-2">
-                  {Math.round((score / questions.length) * 100)}%
-                </p>
-
-              </div>
-
-              <button
-                onClick={restartQuiz}
-                className="w-full mt-6 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition"
-              >
-                🔄 Restart Quiz
-              </button>
-
-            </div>
-
-          ) : (
-
-           
-            <div>
-
-       
-              <div className="flex justify-between items-center mb-3">
-
-                <span className="text-sm font-semibold text-purple-600">
-                  Question {currentQuestion + 1}
-                </span>
-
-                <span className="text-sm text-slate-500">
-                  {questions.length} Questions
-                </span>
-
-              </div>
-
-          
-              <div className="w-full bg-slate-200 rounded-full h-2 mb-6">
-                <div
-                  className="bg-purple-600 h-2 rounded-full transition-all duration-300"
-                  style={{ width: `${progress}%` }}
-                ></div>
-              </div>
-
-       
-              <h2 className="text-2xl font-bold text-slate-800 leading-snug">
-                {questions[currentQuestion].question}
-              </h2>
-
-             
-              <div className="mt-6 space-y-3">
-
-                {questions[currentQuestion].options.map(
-                  (item, index) => (
-
-                    <button
-                      key={index}
-                      onClick={() => handleAnswer(item)}
-                      disabled={selectedAnswer !== null}
-                      className={`w-full text-left p-4 rounded-xl border-2 font-semibold transition ${
-                        selectedAnswer === item
-                          ? item === questions[currentQuestion].answer
-                            ? "bg-green-100 border-green-500 text-green-700"
-                            : "bg-red-100 border-red-500 text-red-700"
-                          : "bg-slate-50 border-slate-200 hover:border-purple-500 hover:bg-purple-50"
-                      }`}
-                    >
-
-                      <span className="mr-3">
-                        {String.fromCharCode(65 + index)}.
-                      </span>
-
-                      {item}
-
-                    </button>
-
-                  )
-                )}
-
-              </div>
-
-            
-              {correctAnswer && (
-                <div
-                  className={`mt-5 p-3 rounded-xl text-center font-bold ${
-                    correctAnswer === "Correct Answer"
-                      ? "bg-green-100 text-green-700"
-                      : "bg-red-100 text-red-700"
-                  }`}
-                >
-                  {correctAnswer}
-                </div>
-              )}
-
-           
-              <div className="flex justify-between items-center mt-6">
-
-                <span className="text-slate-500">
-                  Score
-                </span>
-
-                <span className="font-bold text-purple-600">
-                  {score}
-                </span>
-
-              </div>
-
-            
-              {selectedAnswer && (
-                <button
-                  onClick={nextQuestion}
-                  className="w-full mt-5 bg-purple-600 hover:bg-purple-700 text-white font-bold py-3 rounded-xl transition"
-                >
-                  {currentQuestion === questions.length - 1
-                    ? "Finish Quiz"
-                    : "Next Question →"}
-                </button>
-              )}
-
-            </div>
-          )}
-
-        </div>
+  return(
+    <div className="bg-green-200 w-48 h-48">
+      <div>
+      <h1>Truck A Knowledge Test</h1>
       </div>
-    </div>
-  );
-};
 
+    </div>
+  )
+}
 export default App;
