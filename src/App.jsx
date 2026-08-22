@@ -34,6 +34,7 @@ const App = () => {
   const [score, setScore] = useState(0);
   const [quizFinished, setQuizFinished] = useState(false);
 
+
   const handleAnswer = (item) => {
     if (item === questions[currentQuestion].answer) {
       setCorrectAnswer("Correct Answer");
@@ -48,32 +49,39 @@ const App = () => {
       setCurrentQuestion((prevQuestion) => prevQuestion + 1);
     }
   };
-
+  const restartQuiz = () => {
+    setCurrentQuestion(0);
+    setCorrectAnswer(null);
+    setScore(0);
+    setQuizFinished(false);
+  };
   return (
     <div className="flex flex-col items-center">
-
       <h1 className="text-center text-red-900 p-2 rounded-2xl bg-amber-400">
         Quiz App
       </h1>
 
       <div className="w-72 min-h-48 rounded-2xl mt-4 bg-blue-300 p-4">
-
         {quizFinished ? (
           <div className="text-center">
-            <h1 className="text-xl text-green-700">
-              Quiz Finished!
-            </h1>
+            <h1 className="text-xl text-green-700">Quiz Finished!</h1>
 
             <h2 className="mt-4">
               Your Score: {score} / {questions.length}
             </h2>
+             <div className="flex justify-center mt-16 shadow-2xl">
+          <button
+            onClick={() => restartQuiz()}
+            className="bg-red-600 p-0.5 rounded text-white 
+   hover:bg-green-600  hover:text-blue-800 font-bold items-center text-center"
+          >
+            Restart
+          </button>
+        </div>
           </div>
         ) : (
           <div>
-
-            <p>
-              {questions[currentQuestion].question}
-            </p>
+            <p>{questions[currentQuestion].question}</p>
 
             <div className="mt-4">
               {questions[currentQuestion].options.map((item, index) => (
@@ -86,18 +94,13 @@ const App = () => {
                 </button>
               ))}
             </div>
+             <p>Question {currentQuestion + 1} of {questions.length}</p>
+            <h1 className="text-white mt-4">{correctAnswer}</h1>
 
-            <h1 className="text-white mt-4">
-              {correctAnswer}
-            </h1>
-
-            <h1 className="text-white">
-              Total = {score}
-            </h1>
-
+            <h1 className="text-white">Total = {score}</h1>
           </div>
         )}
-
+       
       </div>
     </div>
   );
