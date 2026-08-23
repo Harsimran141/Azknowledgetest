@@ -47,7 +47,7 @@ const App = () => {
         "None, load security is the responsibility of operator not driver",
       ],
       Answer:
-        "None, load security is the responsibility of operator not driver",
+        "The entire load including items such as gas cans and wheel chocks",
     },
 
     {
@@ -63,7 +63,7 @@ const App = () => {
     },
   ];
   const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectOption, SetselectOption] = useState(false);
+  const [selectOption, SetselectOption] = useState(null);
   const [correct, SetCorrect] = useState(null);
   const [score, SetScore] = useState(0);
   const [answered, Setanswered] = useState(false);
@@ -89,19 +89,18 @@ const App = () => {
         {questions[currentQuestion].options.map((items, index) => (
           <button 
             onClick={() => {
-              if(answered)
-                return;
-              SetselectOption(items);
-              SetCorrect(true);
-              if (items === questions[currentQuestion].Answer) {
-              
-              SetCorrect("Correct");
-             
-               SetScore(score+1)
-              } else {
-                SetCorrect("Wrong");
-              }
-            }}
+  if (answered) return;
+
+  SetselectOption(items);
+  Setanswered(true);
+
+  if (items === questions[currentQuestion].Answer) {
+    SetCorrect("Correct");
+    SetScore(score + 1);
+  } else {
+    SetCorrect("Wrong");
+  }
+}}
             key={index}
             className={`w-full text-left p-3 
               bg-white border border-gray-300 rounded-lg hover:bg-blue-600 
@@ -116,12 +115,18 @@ const App = () => {
         <button
           className="mt-6 bg-blue-600 font-bold px-6 py-2 rounded-lg hover:bg-blue-800 text-white "
           onClick={() => {
-            if (currentQuestion === questions.length - 1) {
-              setCurrentQuestion(0);
-            } else {
-              setCurrentQuestion(currentQuestion + 1);
-            }
-          }}
+  if (!answered) return;
+
+  if (currentQuestion === questions.length - 1) {
+    setCurrentQuestion(0);
+  } else {
+    setCurrentQuestion(currentQuestion + 1);
+  }
+
+  SetselectOption(false);
+  SetCorrect(null);
+  Setanswered(false);
+}}
         >
           Next
         </button>
