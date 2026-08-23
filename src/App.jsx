@@ -959,7 +959,55 @@ const App = () => {
   const [correct, SetCorrect] = useState(null);
   const [score, SetScore] = useState(0);
   const [answered, Setanswered] = useState(false);
-  const [showResult, setShowResult] = useState(false);
+  const [quizFinished, setQuizFinished] = useState(false);
+  if (quizFinished) {
+  return (
+    <div className="min-h-screen bg-green-50 flex items-center justify-center p-5">
+      <div className="bg-white w-full max-w-xl rounded-2xl shadow-xl p-8 text-center">
+
+        <h1 className="text-3xl font-bold text-blue-600">
+          🎉 Test Completed!
+        </h1>
+
+        <p className="text-gray-600 mt-4">
+          You completed all {Questions.length} questions.
+        </p>
+
+        <div className="bg-green-50 rounded-xl p-6 mt-6">
+          <p className="text-gray-600 font-semibold">
+            Your Score
+          </p>
+
+          <p className="text-5xl font-bold text-green-600 mt-2">
+            {score} / {Questions.length}
+          </p>
+
+          <p className="text-xl font-semibold text-gray-700 mt-3">
+            {Math.round((score / Questions.length) * 100)}% Correct
+          </p>
+        </div>
+
+        <button
+          onClick={() => {
+            setCurrentQuestion(0);
+            SetselectOption(null);
+            SetCorrect(null);
+            Setanswered(false);
+            SetScore(0);
+            setQuizFinished(false);
+          }}
+          className="w-full mt-6 bg-orange-500
+                     hover:bg-orange-600
+                     text-white font-bold
+                     py-3 rounded-xl shadow-md"
+        >
+          🔄 Restart Quiz
+        </button>
+
+      </div>
+    </div>
+  );
+}
 
   return (
 <div
@@ -975,16 +1023,20 @@ const App = () => {
   className="bg-white px-4 py-2 rounded-xl
              shadow-md border border-blue-200
              transition-all duration-300
-             hover:scale-200
+             hover:scale-105
              hover:shadow-xl"
 >
-  <p className="text-sm font-semibold text-gray-600">
-    📧 Contact:
-    <span className="text-red-600 ml-1">
-      <div className="text-blue-700">Waris Singh</div>
-      Asrboparai@gmail.com
-    </span>
-  </p>
+  <div className="text-sm font-semibold text-gray-600">
+  📧 Contact:
+
+  <div className="text-blue-700 font-bold">
+    Waris Singh
+  </div>
+
+  <div className="text-red-600">
+    Asrboparai@gmail.com
+  </div>
+</div>
 </div>
     </div>
 
@@ -1092,17 +1144,19 @@ font-semibold transition-all duration-200
     if (!answered) return;
 
     if (currentQuestion === Questions.length - 1) {
-      setCurrentQuestion(0);
-    } else {
-      setCurrentQuestion(currentQuestion + 1);
+      setQuizFinished(true);
+      return;
     }
 
+    setCurrentQuestion(currentQuestion + 1);
     SetselectOption(null);
     SetCorrect(null);
     Setanswered(false);
   }}
 >
-  Next Question →
+  {currentQuestion === Questions.length - 1
+    ? "Submit Test"
+    : "Next Question →"}
 </button>
 <h1
   className={`text-4xl font-bold mt-5 ${
