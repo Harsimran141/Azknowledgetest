@@ -971,10 +971,16 @@ const App = () => {
         </h1>
       </div>
 
-      <div className="flex rounded-2xl justify-center mt-2 text-2xl py-2 px-2 bg-amber-100 font-bold">
-        <p>Question No: {currentQuestion + 1}</p>
-      </div>
-
+     <div className="flex justify-center mt-4">
+  <div className="bg-white border-2 border-blue-500 
+                  rounded-full px-6 py-3 
+                  shadow-md">
+    <p className="text-xl font-bold text-blue-600">
+      Question <span className="text-orange-600">{currentQuestion + 1}</span>
+      <span className="text-gray-500"> / {Questions.length}</span>
+    </p>
+  </div>
+</div>
       <div className="mt-5">
         <h2 className="text-xl text-orange-800 font-bold">
           {Questions[currentQuestion].question}
