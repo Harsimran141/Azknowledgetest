@@ -123,7 +123,7 @@ const App = () => {
     setCurrentQuestion(currentQuestion + 1);
   }
 
-  SetselectOption(false);
+  SetselectOption(null);
   SetCorrect(null);
   Setanswered(false);
 }}
