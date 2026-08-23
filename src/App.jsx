@@ -959,87 +959,119 @@ const App = () => {
   const [correct, SetCorrect] = useState(null);
   const [score, SetScore] = useState(0);
   const [answered, Setanswered] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   return (
-    <div
-className="bg-green-50 w-full max-w-4xl min-h-screen
-rounded-2xl p-4 sm:p-6 md:p-8 mt-5 mx-auto
-shadow-xl border border-green-200"
-    >
-<div className="mb-6">
+<div
+  className="bg-green-50 w-full max-w-4xl min-h-screen
+             rounded-2xl p-4 sm:p-6 md:p-8 mt-5 mx-auto
+             shadow-xl border border-green-200"
+>
+ <div className="mb-6">
 
  
-  <div className="flex justify-end mb-3">
-    <div className="bg-white px-4 py-2 rounded-lg shadow-md border border-blue-200">
-      <p className="text-sm font-semibold text-gray-600">
-        📧 Email:
-        <span className="text-blue-600 ml-1">
-          Asrboparai@gmail.com
-        </span>
+ <div className="flex justify-end mb-4">
+      <div
+        className="bg-white px-4 py-2 rounded-xl
+                   shadow-md border border-blue-200"
+      >
+        <p className="text-sm font-semibold text-gray-600">
+          📧 Email:
+          <span className="text-blue-600 ml-1">
+            Asrboparai@gmail.com
+          </span>
+        </p>
+      </div>
+    </div>
+
+     <div
+      className="bg-white rounded-2xl shadow-md
+                 p-5 border-l-4 border-blue-600"
+    >
+      <h1
+        className="text-2xl sm:text-3xl
+                   text-blue-600 font-bold text-center"
+      >
+        PRACTICE QUESTION
+        <br />
+        CLASS A WRITTEN TEST
+      </h1>
+
+    <p className="text-center text-gray-500 mt-2 font-medium">
+        Practice • Learn • Pass
       </p>
     </div>
   </div>
 
-  <div className="bg-white rounded-2xl shadow-md p-4 border-l-4 border-blue-600">
-    <h1 className="text-3xl text-blue-600 font-bold text-center">
-      PRACTICE QUESTION
-      <br />
-      CLASS A WRITTEN TEST
-    </h1>
-
-    <p className="text-center text-gray-500 mt-2 font-medium">
-      Practice • Learn • Pass
-    </p>
-  </div>
-
-</div>
-
      <div className="flex justify-center mt-4">
-  <div className="bg-white border-2 border-blue-500 
-                  rounded-full px-6 py-3 
-                  shadow-md">
-    <p className="text-xl font-bold text-blue-600">
-      Question <span className="text-orange-600">{currentQuestion + 1}</span>
-      <span className="text-gray-500"> / {Questions.length}</span>
-    </p>
+    <div
+      className="bg-white border-2 border-blue-500
+                 rounded-full px-6 py-3 shadow-md"
+    >
+      <p className="text-lg sm:text-xl font-bold text-blue-600">
+        Question{" "}
+        <span className="text-orange-600">
+          {currentQuestion + 1}
+        </span>
+
+        <span className="text-gray-500">
+          {" "}
+          / {Questions.length}
+        </span>
+      </p>
+    </div>
   </div>
-</div>
-      <div className="mt-6 bg-white rounded-2xl p-5 shadow-md border border-orange-100">
-  <p className="text-sm font-bold text-orange-500 mb-2">
-    QUESTION
-  </p>
+       <div
+    className="mt-6 bg-white rounded-2xl
+               p-5 shadow-md border border-orange-100"
+  >
+    <p className="text-sm font-bold text-orange-500 mb-2">
+      QUESTION
+    </p>
 
-  <h2 className="text-xl md:text-2xl text-gray-800 font-bold leading-relaxed">
-    {Questions[currentQuestion].question}
-  </h2>
-</div>
+    <h2
+      className="text-lg sm:text-xl md:text-2xl
+                 text-gray-800 font-bold leading-relaxed"
+    >
+      {Questions[currentQuestion].question}
+    </h2>
+  </div>
 
-      <div className="flex flex-col gap-3 mt-5">
+ <div className="flex flex-col gap-3 mt-5">
 
-        {Questions[currentQuestion].options.map((items, index) => (
-  <button
-    key={index}
-    onClick={() => {
-      if (answered) return;
+    {Questions[currentQuestion].options.map((items, index) => (
 
-      SetselectOption(items);
-      Setanswered(true);
+      <button
+        key={index}
 
-     if (items === Questions[currentQuestion].answer) {
-  SetCorrect("Correct");
-  SetScore((prevScore) => prevScore + 1);
-} else {
-  SetCorrect("Wrong");
-}
-    }}
+        disabled={answered}
+
+        onClick={() => {
+
+          if (answered) return;
+
+          SetselectOption(items);
+          Setanswered(true);
+
+          if (
+            items === Questions[currentQuestion].answer
+          ) {
+            SetCorrect("Correct");
+            SetScore((prevScore) => prevScore + 1);
+          } else {
+            SetCorrect("Wrong");
+          }
+        }}
     className={`w-full text-left p-4 border-2 rounded-xl
 font-semibold transition-all duration-200
-${
-  answered && items === Questions[currentQuestion].answer
-    ? "bg-green-500 border-green-600 text-white animate-pulse"
-    : answered && items === selectOption
-    ? "bg-red-500 border-red-600 text-white"
-    : "bg-white border-gray-200 text-gray-800 hover:border-blue-500 hover:bg-blue-50 hover:translate-x-1"
+ ${
+            answered &&
+            items === Questions[currentQuestion].answer
+              ? "bg-green-500 border-green-600 text-white shadow-lg"
+     : answered &&
+                items === selectOption
+     ? "bg-red-500 border-red-600 text-white shadow-lg"
+    : "bg-white border-gray-200 text-gray-800   hover:border-blue-500 hover:bg-blue-50 hover:translate-x-1"
 }`}
   >
     {items}
