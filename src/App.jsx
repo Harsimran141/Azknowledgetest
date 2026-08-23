@@ -979,8 +979,9 @@ const App = () => {
              hover:shadow-xl"
 >
   <p className="text-sm font-semibold text-gray-600">
-    📧 Email:
-    <span className="text-blue-600 ml-1">
+    📧 Contact:
+    <span className="text-red-600 ml-1">
+      <div className="text-blue-700">Harsimran Singh</div>
       Asrboparai@gmail.com
     </span>
   </p>
