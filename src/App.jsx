@@ -954,7 +954,7 @@ const App = () => {
 ];
 
 
-    const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [selectOption, SetselectOption] = useState(null);
   const [correct, SetCorrect] = useState(null);
   const [score, SetScore] = useState(0);
