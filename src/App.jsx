@@ -1025,12 +1025,12 @@ shadow-xl border border-green-200"
       SetselectOption(items);
       Setanswered(true);
 
-      if (items === Questions[currentQuestion].answer) {
-        SetCorrect("Correct");
-       SetScore((prevScore) => prevScore + 1);
-      } else {
-        SetCorrect("Wrong");
-      }
+     if (items === Questions[currentQuestion].answer) {
+  SetCorrect("Correct");
+  SetScore((prevScore) => prevScore + 1);
+} else {
+  SetCorrect("Wrong");
+}
     }}
     className={`w-full text-left p-4 border-2 rounded-xl
 font-semibold transition-all duration-200
