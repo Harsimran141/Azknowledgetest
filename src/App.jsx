@@ -984,36 +984,34 @@ const App = () => {
       <div className="flex flex-col gap-3 mt-5">
 
         {Questions[currentQuestion].options.map((items, index) => (
-          <button
-            key={index}
-            onClick={() => {
-              if (answered) return;
+  <button
+    key={index}
+    onClick={() => {
+      if (answered) return;
 
-              SetselectOption(items);
-              Setanswered(true);
+      SetselectOption(items);
+      Setanswered(true);
 
-              if (items === Questions[currentQuestion].answer) {
-                SetCorrect("Correct");
-                SetScore(score + 1);
-              } else {
-                SetCorrect("Wrong");
-              }
-            }}
-            className={`w-full text-left p-3
-              bg-white border border-gray-300 rounded-lg
-              hover:bg-blue-600
-              ${
-                items === selectOption
-                  ? correct === "Correct"
-                    ? "bg-green-500 text-white"
-                    : "bg-red-500 text-white"
-                  : "text-black"
-              }
-            `}
-          >
-            {items}
-          </button>
-        ))}
+      if (items === Questions[currentQuestion].answer) {
+        SetCorrect("Correct");
+        SetScore(score + 1);
+      } else {
+        SetCorrect("Wrong");
+      }
+    }}
+    className={`w-full text-left p-3 border rounded-lg font-semibold
+      ${
+        answered && items === Questions[currentQuestion].answer
+          ? "bg-green-500 text-white animate-pulse"
+          : answered && items === selectOption
+          ? "bg-red-500 text-white"
+          : "bg-white text-black hover:bg-blue-100"
+      }
+    `}
+  >
+    {items}
+  </button>
+))}
 
         <button
           className="mt-6 bg-blue-600 font-bold px-6 py-2 rounded-lg hover:bg-blue-800 text-white"
