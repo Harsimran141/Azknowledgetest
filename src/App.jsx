@@ -953,12 +953,13 @@ const App = () => {
   }
 ];
 
-const [quizFinished, setQuizFinished] = useState(false);
-const [currentQuestion, setCurrentQuestion] = useState(0);
-const [selectOption, SetselectOption] = useState(null);
-const [answered, Setanswered] = useState(false);
-const [correct, SetCorrect] = useState(null);
-const [score, SetScore] = useState(0);
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [selectOption, SetselectOption] = useState(null);
+  const [correct, SetCorrect] = useState(null);
+  const [score, SetScore] = useState(0);
+  const [answered, Setanswered] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   return (
 <div
@@ -1050,17 +1051,21 @@ const [score, SetScore] = useState(0);
         disabled={answered}
 
         onClick={() => {
-  if (!answered) return;
 
-  if (currentQuestion === Questions.length - 1) {
-    setQuizFinished(true);
-  } else {
-    setCurrentQuestion(currentQuestion + 1);
-    SetselectOption(null);
-    SetCorrect(null);
-    Setanswered(false);
-  }
-}}
+          if (answered) return;
+
+          SetselectOption(items);
+          Setanswered(true);
+
+          if (
+            items === Questions[currentQuestion].answer
+          ) {
+            SetCorrect("Correct");
+            SetScore((prevScore) => prevScore + 1);
+          } else {
+            SetCorrect("Wrong");
+          }
+        }}
     className={`w-full text-left p-4 border-2 rounded-xl
 font-semibold transition-all duration-200
  ${
@@ -1077,7 +1082,7 @@ font-semibold transition-all duration-200
   </button>
 ))}
 
-   <button
+     <button
   className="w-full mt-6 bg-blue-600
              hover:bg-blue-700 active:scale-95
              text-white font-bold
@@ -1087,35 +1092,17 @@ font-semibold transition-all duration-200
     if (!answered) return;
 
     if (currentQuestion === Questions.length - 1) {
-      setQuizFinished(true);
+      setCurrentQuestion(0);
     } else {
       setCurrentQuestion(currentQuestion + 1);
-      SetselectOption(null);
-      SetCorrect(null);
-      Setanswered(false);
     }
+
+    SetselectOption(null);
+    SetCorrect(null);
+    Setanswered(false);
   }}
 >
-  {currentQuestion === Questions.length - 1
-    ? "Submit Test"
-    : "Next Question →"}
-</button>
-<button
-  className="w-full mt-3 bg-orange-500
-             hover:bg-orange-600 active:scale-95
-             text-white font-bold
-             py-3 rounded-xl shadow-md
-             transition-all duration-200"
-  onClick={() => {
-  setCurrentQuestion(0);
-  SetselectOption(null);
-  SetCorrect(null);
-  Setanswered(false);
-  SetScore(0);
-  setQuizFinished(false);
-}}
->
-  🔄 Restart Quiz
+  Next Question →
 </button>
 <h1
   className={`text-4xl font-bold mt-5 ${
