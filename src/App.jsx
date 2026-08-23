@@ -954,12 +954,11 @@ const App = () => {
 ];
 
 
-  const [currentQuestion, setCurrentQuestion] = useState(0);
-  const [selectOption, SetselectOption] = useState(null);
-  const [correct, SetCorrect] = useState(null);
-  const [score, SetScore] = useState(0);
-  const [answered, Setanswered] = useState(false);
-  const [showResult, setShowResult] = useState(false);
+const [currentQuestion, setCurrentQuestion] = useState(0);
+const [selectOption, SetselectOption] = useState(null);
+const [answered, Setanswered] = useState(false);
+const [correct, SetCorrect] = useState(null);
+const [score, SetScore] = useState(0);
 
   return (
 <div
@@ -1103,6 +1102,22 @@ font-semibold transition-all duration-200
   }}
 >
   Next Question →
+</button>
+<button
+  className="w-full mt-3 bg-orange-500
+             hover:bg-orange-600 active:scale-95
+             text-white font-bold
+             py-3 rounded-xl shadow-md
+             transition-all duration-200"
+  onClick={() => {
+    setCurrentQuestion(0);
+    SetselectOption(null);
+    SetCorrect(null);
+    Setanswered(false);
+    SetScore(0);
+  }}
+>
+  🔄 Restart Quiz
 </button>
 <h1
   className={`text-4xl font-bold mt-5 ${
