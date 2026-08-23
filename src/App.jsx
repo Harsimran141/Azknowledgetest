@@ -972,20 +972,19 @@ const App = () => {
  
  <div className="flex justify-end mb-4">
       <div
-        className="bg-white px-4 py-2 rounded-xl
-                   shadow-md border border-blue-200"
-      >
-        <p
-  className="text-sm font-semibold text-gray-600
-             transition-transform duration-300
-             hover:scale-110"
+  className="bg-white px-4 py-2 rounded-xl
+             shadow-md border border-blue-200
+             transition-all duration-300
+             hover:scale-105
+             hover:shadow-xl"
 >
-  📧 Email:
-  <span className="text-blue-600 ml-1">
-    Asrboparai@gmail.com
-  </span>
-</p>
-      </div>
+  <p className="text-sm font-semibold text-gray-600">
+    📧 Email:
+    <span className="text-blue-600 ml-1">
+      Asrboparai@gmail.com
+    </span>
+  </p>
+</div>
     </div>
 
      <div
