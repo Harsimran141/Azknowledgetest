@@ -1095,17 +1095,35 @@ ${
 
 
 
-  <div className="bg-white border-l-4 border-green-500
-                  rounded-xl p-4 shadow-md
-                  hover:shadow-lg transition duration-300">
+ <div className="bg-white border-l-4 border-green-500
+                rounded-xl p-4 shadow-md
+                hover:shadow-lg transition duration-300">
+
+  <div className="flex justify-between items-center">
     <p className="text-sm text-gray-500 font-semibold uppercase">
       Current Score
     </p>
 
-    <p className="text-3xl font-bold text-green-600 mt-1">
+    <span className="text-xs bg-green-100 text-green-700
+                     px-2 py-1 rounded-full font-bold">
+      SCORE
+    </span>
+  </div>
+
+  <div className="flex items-end gap-2 mt-2">
+    <p className="text-3xl font-bold text-green-600">
       {score}
     </p>
+
+    <p className="text-gray-500 font-semibold mb-1">
+      / {Questions.length}
+    </p>
   </div>
+
+  <p className="text-sm text-gray-500 mt-1">
+    {Math.round((score / Questions.length) * 100)}% Correct
+  </p>
+</div>
 
 </div>
       </div>
