@@ -1048,14 +1048,35 @@ const App = () => {
           {correct}
         </h1>
 
-        <div className="text-2xl font-bold mt-5">
-          Selected Answer: {selectOption}
-        </div>
+       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
-        <div className="text-2xl font-bold mt-5">
-          Current Score = {score}
-        </div>
+  <div className="bg-white border-l-4 border-blue-500
+                  rounded-xl p-4 shadow-md
+                  hover:shadow-lg transition duration-300">
+    <p className="text-sm text-gray-500 font-semibold uppercase">
+      Selected Answer
+    </p>
 
+    <p className="text-lg font-bold text-blue-700 mt-1">
+      {selectOption || "Not Answered"}
+    </p>
+  </div>
+
+
+
+  <div className="bg-white border-l-4 border-green-500
+                  rounded-xl p-4 shadow-md
+                  hover:shadow-lg transition duration-300">
+    <p className="text-sm text-gray-500 font-semibold uppercase">
+      Current Score
+    </p>
+
+    <p className="text-3xl font-bold text-green-600 mt-1">
+      {score}
+    </p>
+  </div>
+
+</div>
       </div>
     </div>
   );
