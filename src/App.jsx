@@ -965,11 +965,32 @@ const App = () => {
       className="bg-green-200 w-[800px] h-[800px]
       rounded-2xl p-8 mt-10 mx-auto shadow-lg"
     >
-      <div className="flex justify-center">
-        <h1 className="text-3xl text-blue-600 font-bold text-center mb-8">
-          PRACTICE QUESTION CLASS A WRITTEN TEST
-        </h1>
-      </div>
+    <div className="mb-6">
+
+  <div className="flex justify-end mb-3">
+    <div className="bg-white px-4 py-2 rounded-lg shadow-md border border-blue-200">
+      <p className="text-sm font-semibold text-gray-600">
+        📧 Email:
+        <span className="text-blue-600 ml-1">
+          Asrboparai@gmail.com
+        </span>
+      </p>
+    </div>
+  </div>
+
+  <div className="bg-white rounded-2xl shadow-md p-4 border-l-4 border-blue-600">
+    <h1 className="text-3xl text-blue-600 font-bold text-center">
+      PRACTICE QUESTION
+      <br />
+      CLASS A WRITTEN TEST
+    </h1>
+
+    <p className="text-center text-gray-500 mt-2 font-medium">
+      Practice • Learn • Pass
+    </p>
+  </div>
+
+</div>
 
      <div className="flex justify-center mt-4">
   <div className="bg-white border-2 border-blue-500 
