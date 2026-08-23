@@ -981,7 +981,7 @@ const App = () => {
   <p className="text-sm font-semibold text-gray-600">
     📧 Contact:
     <span className="text-red-600 ml-1">
-      <div className="text-blue-700">Harsimran Singh</div>
+      <div className="text-blue-700">Waris Singh</div>
       Asrboparai@gmail.com
     </span>
   </p>
