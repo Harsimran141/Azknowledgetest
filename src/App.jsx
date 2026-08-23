@@ -975,12 +975,16 @@ const App = () => {
         className="bg-white px-4 py-2 rounded-xl
                    shadow-md border border-blue-200"
       >
-        <p className="text-sm font-semibold text-gray-600">
-          📧 Email:
-          <span className="text-blue-600 ml-1">
-            Asrboparai@gmail.com
-          </span>
-        </p>
+        <p
+  className="text-sm font-semibold text-gray-600
+             transition-transform duration-300
+             hover:scale-110"
+>
+  📧 Email:
+  <span className="text-blue-600 ml-1">
+    Asrboparai@gmail.com
+  </span>
+</p>
       </div>
     </div>
 
