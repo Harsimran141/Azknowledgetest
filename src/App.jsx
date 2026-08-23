@@ -1027,7 +1027,7 @@ shadow-xl border border-green-200"
 
       if (items === Questions[currentQuestion].answer) {
         SetCorrect("Correct");
-        SetScore(score + 1);
+       SetScore((prevScore) => prevScore + 1);
       } else {
         SetCorrect("Wrong");
       }
@@ -1068,16 +1068,15 @@ ${
 >
   Next Question →
 </button>
-
-        <h1
-          className={`text-4xl font-bold mt-5 ${
-            correct === "Correct"
-              ? "text-green-600"
-              : "text-red-600"
-          }`}
-        >
-          {correct}
-        </h1>
+<h1
+  className={`text-4xl font-bold mt-5 ${
+    correct === "Correct"
+      ? "text-green-600"
+      : "text-red-600"
+  }`}
+>
+  {correct}
+</h1>
 
        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-6">
 
