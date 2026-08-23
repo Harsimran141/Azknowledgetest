@@ -1,7 +1,6 @@
 // const Questions = [
 //   {
-//     id: 1,
-//     type: "multiple_choice",
+   
 //     question: "How can you ensure that the vehicle has passed an annual inspection?",
 //     options: [
 //       "A valid inspection sticker is attached to the vehicle",
@@ -12,8 +11,7 @@
 //   },
 
 //   {
-//     id: 2,
-//     type: "multiple_choice",
+  
 //     question: "A police or appointed ministry officer has the authority to perform a safety inspection:",
 //     options: [
 //       "Only at an inspection station",
@@ -24,8 +22,7 @@
 //   },
 
 //   {
-//     id: 3,
-//     type: "multiple_choice",
+
 //     question: "A properly completed daily inspection report contains:",
 //     options: [
 //       "Appropriate schedule",
@@ -36,8 +33,7 @@
 //   },
 
 //   {
-//     id: 4,
-//     type: "multiple_choice",
+ 
 //     question: "You must ensure that the following items are secure on the vehicle:",
 //     options: [
 //       "Only items being transported for paid compensation",
@@ -48,8 +44,7 @@
 //   },
 
 //   {
-//     id: 5,
-//     type: "multiple_choice",
+ 
 //     question: "A front tire fails an inspection if the tread on two adjacent grooves anywhere on the tire are:",
 //     options: [
 //       "Less than 1.5 millimetres (0.06 inches)",
@@ -60,8 +55,7 @@
 //   },
 
 //   {
-//     id: 6,
-//     type: "multiple_choice",
+ 
 //     question: "What is the minimum number of consecutive off-duty hours you must take after accumulating 13 hours driving time?",
 //     options: [
 //       "7 hours",
@@ -72,8 +66,7 @@
 //   },
 
 //   {
-//     id: 7,
-//     type: "multiple_choice",
+  
 //     question: "Three of the following four are good practices before backing. Which is not?",
 //     options: [
 //       "Sound horn",
@@ -84,8 +77,7 @@
 //   },
 
 //   {
-//     id: 8,
-//     type: "multiple_choice",
+    
 //     question: "Which of the following steps do you perform after you raise and secure the landing gear?",
 //     options: [
 //       "Perform tug test to check connection",
@@ -96,8 +88,7 @@
 //   },
 
 //   {
-//     id: 9,
-//     type: "multiple_choice",
+   
 //     question: "After the jaws lock when coupling, you should:",
 //     options: [
 //       "Perform tug test, then visually confirm coupling is secure",
@@ -108,8 +99,7 @@
 //   },
 
 //   {
-//     id: 10,
-//     type: "sign_identification",
+ 
 //     sign_text: "OVER 65 THIS LANE",
 //     question: "This sign means:",
 //     options: [
@@ -121,8 +111,7 @@
 //   },
 
 //   {
-//     id: 11,
-//     type: "multiple_choice",
+    
 //     question: "After stopping on an uphill grade, when rejoining traffic you should:",
 //     options: [
 //       "Keep the clutch slipping while slowly accelerating",
@@ -133,8 +122,7 @@
 //   },
 
 //   {
-//     id: 12,
-//     type: "multiple_choice",
+   
 //     question: "The main reason you should check under the hood is:",
 //     options: [
 //       "To verify fluid levels",
@@ -145,8 +133,7 @@
 //   },
 
 //   {
-//     id: 13,
-//     type: "sign_identification",
+ 
 //     question: "This sign means:",
 //     options: [
 //       "No truck parking",
@@ -157,8 +144,7 @@
 //   },
 
 //   {
-//     id: 14,
-//     type: "multiple_choice",
+
 //     question: "When backing up the tractor to couple with the trailer, you must:",
 //     options: [
 //       "Back from the angle",
@@ -169,8 +155,7 @@
 //   },
 
 //   {
-//     id: 15,
-//     type: "multiple_choice",
+    
 //     question: "The maximum length of a combination vehicle is:",
 //     options: [
 //       "17 metres (56 feet)",
@@ -181,8 +166,7 @@
 //   },
 
 //   {
-//     id: 16,
-//     type: "multiple_choice",
+   
 //     question: "Many commercial motor vehicles have a speed limiting system which limits the maximum speed to:",
 //     options: [
 //       "85 km per hr",
@@ -193,8 +177,7 @@
 //   },
 
 //   {
-//     id: 17,
-//     type: "multiple_choice",
+
 //     question: "Dangerous goods transported on Ontario's roads and highways are identified:",
 //     options: [
 //       "By markings and safety labels for each classification of dangerous goods",
@@ -205,8 +188,7 @@
 //   },
 
 //   {
-//     id: 18,
-//     type: "multiple_choice",
+  
 //     question: "If during the course of a trip you discover a minor defect, you must:",
 //     options: [
 //       "Record on a daily report, inform operator and monitor condition",
@@ -217,8 +199,7 @@
 //   },
 
 //   {
-//     id: 19,
-//     type: "multiple_choice",
+ 
 //     question: "Three of the following activities are considered on-duty, which one is off-duty:",
 //     options: [
 //       "Time spent in a sleeper berth",
@@ -229,8 +210,7 @@
 //   },
 
 //   {
-//     id: 20,
-//     type: "multiple_choice",
+  
 //     question: "When making a right turn to prevent the wheels from going over the curb or sidewalk, you should:",
 //     options: [
 //       "Sound the horn",
@@ -241,8 +221,7 @@
 //   },
 
 //   {
-//     id: 21,
-//     type: "multiple_choice",
+   
 //     question: "After a daily inspection, you discover the vehicle does not have any working brake lamps. What must you do:",
 //     options: [
 //       "No further action is required",
@@ -253,8 +232,7 @@
 //   },
 
 //   {
-//     id: 22,
-//     type: "multiple_choice",
+
 //     question: "You can be required to attend a truck inspection station at the request of a :",
 //     options: [
 //       "Mechanic",
@@ -265,8 +243,7 @@
 //   },
 
 //   {
-//     id: 23,
-//     type: "multiple_choice",
+
 //     question: "Before reversing you should:",
 //     options: [
 //       "Exit the vehicle and check the path the vehicle will take",
@@ -277,8 +254,7 @@
 //   },
 
 //   {
-//     id: 24,
-//     type: "multiple_choice",
+
 //     question: "When your wheels have been in for service, it is important that you:",
 //     options: [
 //       "Tell the wheel installer to tighten the wheels to a level higher than specification",
@@ -289,8 +265,7 @@
 //   },
 
 //   {
-//     id: 25,
-//     type: "multiple_choice",
+  
 //     question: "You cannot drive a commercial motor vehicle after accumulating how many on-duty hours in a seven day cycle:",
 //     options: [
 //       "50 hours",
@@ -301,8 +276,7 @@
 //   },
 
 //   {
-//     id: 26,
-//     type: "multiple_choice",
+ 
 //     question: "When approaching a roundabout you must:",
 //     options: [
 //       "Stop prior to roundabout to perform traffic check",
@@ -313,8 +287,7 @@
 //   },
 
 //   {
-//     id: 27,
-//     type: "multiple_choice",
+    
 //     question: "Anti-lock braking systems (ABS):",
 //     options: [
 //       "Prevent wheel lock and may reduce steering control",
@@ -325,8 +298,7 @@
 //   },
 
 //   {
-//     id: 28,
-//     type: "multiple_choice",
+    
 //     question: "The maximum width of a commercial motor vehicle, including the load, shall not exceed:",
 //     options: [
 //       "1.6 metres (5.2 feet)",
@@ -337,8 +309,7 @@
 //   },
 
 //   {
-//     id: 29,
-//     type: "multiple_choice",
+    
 //     question: "When approaching an intersection and you notice the roadway beyond is blocked with traffic, you should:",
 //     options: [
 //       "Sound horn to warn vehicles ahead to move on",
@@ -349,8 +320,7 @@
 //   },
 
 //   {
-//     id: 30,
-//     type: "sign_identification",
+  
 //     question: "This sign means:",
 //     options: [
 //       "Truck overturning",
@@ -361,8 +331,7 @@
 //   },
 
 //   {
-//     id: 31,
-//     type: "multiple_choice",
+  
 //     question: "Which of the following items are checked at a truck inspection station:",
 //     options: [
 //       "Vehicle is clean",
@@ -373,8 +342,7 @@
 //   },
 
 //   {
-//     id: 32,
-//     type: "multiple_choice",
+ 
 //     question: "The driver of which of the following vehicles must adhere to hours of service regulations:",
 //     options: [
 //       "Commercial motor vehicles over 4500 kg",
@@ -385,8 +353,7 @@
 //   },
 
 //   {
-//     id: 33,
-//     type: "multiple_choice",
+
 //     question: "To ensure brakes are functioning normally, you should test the brakes:",
 //     options: [
 //       "Whenever convenient",
@@ -397,8 +364,7 @@
 //   },
 
 //   {
-//     id: 34,
-//     type: "multiple_choice",
+
 //     question: "The easiest and safest backing manoeuvre is:",
 //     options: [
 //       "Straight backing",
@@ -409,8 +375,7 @@
 //   },
 
 //   {
-//     id: 35,
-//     type: "multiple_choice",
+
 //     question: "As a driver you should minimize possible development of a dangerous situation by:",
 //     options: [
 //       "Driving only during daylight hours",
@@ -421,8 +386,7 @@
 //   },
 
 //   {
-//     id: 36,
-//     type: "multiple_choice",
+
 //     question: "When uncoupling a trailer, after having lowered the landing gear you should:",
 //     options: [
 //       "Test trailer brake lights",
@@ -433,8 +397,7 @@
 //   },
 
 //   {
-//     id: 37,
-//     type: "multiple_choice",
+ 
 //     question: "A licensed driver learning to operate a commercial motor vehicle must:",
 //     options: [
 //       "Obtain permission from the ministry before making arrangements for instruction",
@@ -445,8 +408,7 @@
 //   },
 
 //   {
-//     id: 38,
-//     type: "multiple_choice",
+  
 //     question: "When the driver of another vehicle is about to overtake and pass your vehicle, you must:",
 //     options: [
 //       "Move to the right and allow such vehicle to pass",
@@ -457,8 +419,7 @@
 //   },
 
 //   {
-//     id: 39,
-//     type: "sign_identification",
+   
 //     question: "This sign means:",
 //     options: [
 //       "Cement factory ahead",
@@ -469,8 +430,7 @@
 //   },
 
 //   {
-//     id: 40,
-//     type: "multiple_choice",
+
 //     question: "When rounding a right curve on a highway with a tractor-trailer, you should:",
 //     options: [
 //       "Flash the brake lights",
@@ -481,8 +441,7 @@
 //   },
 
 //   {
-//     id: 41,
-//     type: "multiple_choice",
+ 
 //     question: "If driving over the centre line while making a right hand turn, you must:",
 //     options: [
 //       "Only signal the turn and check the mirrors",
@@ -493,8 +452,7 @@
 //   },
 
 //   {
-//     id: 42,
-//     type: "multiple_choice",
+   
 //     question: "If during the course of a trip you discover a minor defect, you must:",
 //     options: [
 //       "Record on daily report, inform operator and monitor condition",
@@ -505,8 +463,7 @@
 //   },
 
 //   {
-//     id: 43,
-//     type: "multiple_choice",
+
 //     question: "Which of the following is true when driving in a roundabout:",
 //     options: [
 //       "Requires a much faster speed",
@@ -517,9 +474,7 @@
 //   },
 
 //   {
-//     id: 44,
-//     type: "sign_identification",
-//     sign_text: "8%",
+   
 //     question: "This sign means:",
 //     options: [
 //       "Steep downgrade ahead",
@@ -530,8 +485,7 @@
 //   },
 
 //   {
-//     id: 45,
-//     type: "multiple_choice",
+  
 //     question: "The main reason you should check under the hood is:",
 //     options: [
 //       "To verify fluid levels",
@@ -542,8 +496,6 @@
 //   },
 
 //   {
-//     id: 46,
-//     type: "multiple_choice",
 //     question: "When flares or reflectors are required to mark a disabled commercial motor vehicle on a highway, you must place them:",
 //     options: [
 //       "15 metres (50 feet) to front and rear",
@@ -554,8 +506,7 @@
 //   },
 
 //   {
-//     id: 47,
-//     type: "multiple_choice",
+  
 //     question: "What documentation is not required by the highway traffic act to be carried in a commercial motor vehicle?",
 //     options: [
 //       "The legible copy of the CVOR certificate",
@@ -566,8 +517,7 @@
 //   },
 
 //   {
-//     id: 48,
-//     type: "multiple_choice",
+
 //     question: "After you detect and record a major defect on your daily inspection report, you must:",
 //     options: [
 //       "Inform the operator and do not operate the vehicle until defect is repaired",
@@ -578,8 +528,7 @@
 //   },
 
 //   {
-//     id: 49,
-//     type: "multiple_choice",
+
 //     question: "Who is permitted to change a tire on a commercial motor vehicle?",
 //     options: [
 //       "Driver",
@@ -590,8 +539,7 @@
 //   },
 
 //   {
-//     id: 50,
-//     type: "multiple_choice",
+  
 //     question: "When daily log is required, you must track:",
 //     options: [
 //       "On-duty time only",
@@ -602,8 +550,7 @@
 //   },
 
 //   {
-//     id: 51,
-//     type: "multiple_choice",
+
 //     question: "Before descending a steep hill, a good safe driving practice is to:",
 //     options: [
 //       "Place the gearshift in neutral",
@@ -614,8 +561,7 @@
 //   },
 
 //   {
-//     id: 52,
-//     type: "multiple_choice",
+  
 //     question: "Any load which projects from the rear of the vehicle by 1.5m (5 feet) or more must be marked with:",
 //     options: [
 //       "A yellow flag or marker in daylight, a blue light at night",
@@ -626,8 +572,7 @@
 //   },
 
 //   {
-//     id: 53,
-//     type: "multiple_choice",
+   
 //     question: "When starting to move a loaded tractor-trailer, the vehicle should be put in:",
 //     options: [
 //       "The highest available gear",
@@ -638,8 +583,7 @@
 //   },
 
 //   {
-//     id: 54,
-//     type: "multiple_choice",
+
 //     question: "When uncoupling, the landing gear should:",
 //     options: [
 //       "Be lowered before brakes are set or wheels are chocked",
@@ -650,8 +594,7 @@
 //   },
 
 //   {
-//     id: 55,
-//     type: "multiple_choice",
+  
 //     question: "When are you required to carry the daily inspection report and applicable schedule?",
 //     options: [
 //       "When you are off-duty",
@@ -662,8 +605,7 @@
 //   },
 
 //   {
-//     id: 56,
-//     type: "multiple_choice",
+
 //     question: "What factor does not affect the maximum allowable gross weight of a commercial vehicle?",
 //     options: [
 //       "The weight allowed on the steering axle",
@@ -674,8 +616,7 @@
 //   },
 
 //   {
-//     id: 57,
-//     type: "sign_identification",
+   
 //     question: "This sign means:",
 //     options: [
 //       "A watch for tipping vehicles",
@@ -686,8 +627,7 @@
 //   },
 
 //   {
-//     id: 58,
-//     type: "multiple_choice",
+    
 //     question: "Allowing the clutch to slip will result in:",
 //     options: [
 //       "A faster acceleration when the vehicle is loaded",
@@ -698,8 +638,7 @@
 //   },
 
 //   {
-//     id: 59,
-//     type: "multiple_choice",
+
 //     question: "When climbing a steep hill and your speed is reduced you should:",
 //     options: [
 //       "Continue driving and activate four-way flashers during ascent",
@@ -710,8 +649,7 @@
 //   },
 
 //   {
-//     id: 60,
-//     type: "multiple_choice",
+  
 //     question: "Which of the following would be considered a minor defect when conducting a daily inspection?",
 //     options: [
 //       "Flat tire",
@@ -722,8 +660,7 @@
 //   },
 
 //   {
-//     id: 61,
-//     type: "multiple_choice",
+  
 //     question: "What is the maximum number of hours you can drive in a day?",
 //     options: [
 //       "10 hours",
@@ -734,8 +671,7 @@
 //   },
 
 //   {
-//     id: 62,
-//     type: "multiple_choice",
+    
 //     question: "To safely complete a turn you should:",
 //     options: [
 //       "Should horn to warn pedestrians",
@@ -746,8 +682,7 @@
 //   },
 
 //   {
-//     id: 63,
-//     type: "multiple_choice",
+  
 //     question: "When you perform a daily inspection and find no defects, what must you do?",
 //     options: [
 //       "Skip the daily inspection report and proceed",
@@ -758,8 +693,7 @@
 //   },
 
 //   {
-//     id: 64,
-//     type: "multiple_choice",
+   
 //     question: "The purpose of a central apron in a roundabout is to:",
 //     options: [
 //       "Create an extra lane for all traffic",
@@ -770,8 +704,7 @@
 //   },
 
 //   {
-//     id: 65,
-//     type: "multiple_choice",
+ 
 //     question: "When can you drive the vehicle after identifying a major defect?",
 //     options: [
 //       "Only after the defect is repaired",
@@ -782,8 +715,7 @@
 //   },
 
 //   {
-//     id: 66,
-//     type: "multiple_choice",
+   
 //     question: "You must notice excessive lash or free play which may indicate a defect in:",
 //     options: [
 //       "Brake chamber",
@@ -794,8 +726,7 @@
 //   },
 
 //   {
-//     id: 67,
-//     type: "sign_identification",
+   
 //     question: "This sign means:",
 //     options: [
 //       "No truck parking in this lane",
@@ -806,8 +737,7 @@
 //   },
 
 //   {
-//     id: 68,
-//     type: "multiple_choice",
+ 
 //     question: "What is the maximum number of hours that a daily inspection report is valid for:",
 //     options: [
 //       "12 hours",
@@ -818,8 +748,7 @@
 //   },
 
 //   {
-//     id: 69,
-//     type: "multiple_choice",
+
 //     question: "You must inspect the load securement and make necessary adjustments after:",
 //     options: [
 //       "80 km",
@@ -830,8 +759,7 @@
 //   },
 
 //   {
-//     id: 70,
-//     type: "multiple_choice",
+
 //     question: "Who is responsible for ensuring that loads are secured while in operation:",
 //     options: [
 //       "The dispatcher",
@@ -842,8 +770,7 @@
 //   },
 
 //   {
-//     id: 71,
-//     type: "multiple_choice",
+   
 //     question: "A good safe driving practice on a multi-lane highway is to:",
 //     options: [
 //       "Manage your blind spot and keep adequate space",
@@ -854,8 +781,7 @@
 //   },
 
 //   {
-//     id: 72,
-//     type: "multiple_choice",
+ 
 //     question: "To assist you in performing the daily inspection, it is necessary to:",
 //     options: [
 //       "Inspect only major fault areas",
@@ -866,8 +792,7 @@
 //   },
 
 //   {
-//     id: 73,
-//     type: "multiple_choice",
+
 //     question: "Gross weight of a commercial motor vehicle means:",
 //     options: [
 //       "The weight of the trailer without the load",
@@ -878,8 +803,7 @@
 //   },
 
 //   {
-//     id: 74,
-//     type: "multiple_choice",
+  
 //     question: "Excessive free play or lash e.g. over 10cm (4 inches), may indicate to you that:",
 //     options: [
 //       "Steering needs repair or adjustment before proceeding",
@@ -890,8 +814,7 @@
 //   },
 
 //   {
-//     id: 75,
-//     type: "multiple_choice",
+
 //     question: "When approaching a railway crossing and the signals lights are activated, you must stop:",
 //     options: [
 //       "5 metres from the nearest rail",
@@ -902,8 +825,7 @@
 //   },
 
 //   {
-//     id: 76,
-//     type: "multiple_choice",
+   
 //     question: "The responsibility for the safe operating condition of a commercial motor vehicle is that of:",
 //     options: [
 //       "The police and the driver",
@@ -914,8 +836,7 @@
 //   },
 
 //   {
-//     id: 77,
-//     type: "multiple_choice",
+ 
 //     question: "The key principle in loading any cargo on a commercial vehicle is to ensure:",
 //     options: [
 //       "Load is all the way to the back over rear axle",
@@ -938,8 +859,7 @@
 //   },
 
 //   {
-//     id: 79,
-//     type: "multiple_choice",
+   
 //     question: "The maximum height of a commercial motor vehicle, including the load is:",
 //     options: [
 //       "3.75 metres (12.3 feet)",
@@ -950,8 +870,7 @@
 //   },
 
 //   {
-//     id: 80,
-//     type: "multiple_choice",
+ 
 //     question: "If you are required to hook up a trailer at a remote location, you must:",
 //     options: [
 //       "Hook up the trailer and immediately start the trip",
@@ -962,8 +881,7 @@
 //   },
 
 //   {
-//     id: 81,
-//     type: "multiple_choice",
+
 //     question: "You are required to ensure that the brakes on the vehicle are not out of adjustment:",
 //     options: [
 //       "It is not the driver's responsibility to ensure the brakes are in adjustment",
@@ -974,8 +892,7 @@
 //   },
 
 //   {
-//     id: 82,
-//     type: "multiple_choice",
+   
 //     question: "After coupling, if any space appears between the upper plate of the trailer and fifth wheel, this indicates that:",
 //     options: [
 //       "Landing gear can be raised",
@@ -986,8 +903,7 @@
 //   },
 
 //   {
-//     id: 83,
-//     type: "sign_identification",
+    
 //     question: "This sign means:",
 //     options: [
 //       "Truck green routes",
@@ -998,8 +914,7 @@
 //   },
 
 //   {
-//     id: 84,
-//     type: "sign_identification",
+  
 //     sign_text: "TRUCKS ENTER INSPECTION STATION WHEN LIGHTS FLASHING",
 //     question: "This sign means:",
 //     options: [
@@ -1011,8 +926,7 @@
 //   },
 
 //   {
-//     id: 85,
-//     type: "sign_identification",
+   
 //     sign_text: "MAXIMUM 00 00 tonnes",
 //     question: "This sign means:",
 //     options: [
@@ -1024,8 +938,7 @@
 //   },
 
 //   {
-//     id: 86,
-//     type: "multiple_choice",
+ 
 //     question: "The person who cannot be charged with an offence for an overloaded vehicle is:",
 //     options: [
 //       "The driver",
