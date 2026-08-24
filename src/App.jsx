@@ -1027,7 +1027,7 @@ const App = () => {
              hover:shadow-xl"
 >
   <div className="text-sm font-semibold text-gray-600">
-  📧 Contact:
+  📧 Contact:919463446881
 
   <div className="text-blue-700 font-bold">
     Waris Singh
