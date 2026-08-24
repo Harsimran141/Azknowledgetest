@@ -1027,7 +1027,7 @@ const App = () => {
              hover:scale-105
              hover:shadow-xl"
 >
-  <div className="text-sm font-semibold text-gray-600">
+  <div className="text-sm bg-amber-100 rounded p-4 font-semibold text-gray-600">
    Contact:- 919463446881
 
   <div className="text-blue-700 font-bold">
