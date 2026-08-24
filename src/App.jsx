@@ -1027,16 +1027,23 @@ const App = () => {
              hover:scale-105
              hover:shadow-xl"
 >
-  <div className="text-sm bg-amber-100 rounded p-4 font-semibold text-gray-600">
-   Contact:- 919463446881
+<div className="w-full max-w-md mx-auto mt-4 p-5 bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl border border-amber-200 shadow-lg hover:shadow-2xl transition-all duration-300">
 
-  <div className="text-blue-700 font-bold">
-    Waris Singh
+  <div className="text-sm font-semibold text-gray-600 mb-3">
+    <span className="text-gray-700">📞 Contact:</span>
+    <span className="text-gray-900 ml-2">
+      919463446881
+    </span>
   </div>
 
-  <div className="text-red-600">
-    Asrboparai@gmail.com
+  <div className="text-xl text-blue-700 font-bold mb-2 hover:text-blue-900 transition">
+    👤 Waris Singh
   </div>
+
+  <div className="text-sm text-red-600 font-semibold hover:text-red-800 transition cursor-pointer">
+    📧 Asrboparai@gmail.com
+  </div>
+
 </div>
 </div>
     </div>
