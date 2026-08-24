@@ -136,6 +136,7 @@ const App = () => {
   },
 
   {
+    
     question: "This sign means:",
     options: [
       "No truck parking",
