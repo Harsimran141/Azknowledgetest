@@ -1117,8 +1117,8 @@ const App = () => {
 <div className="w-full max-w-md mx-auto mt-4 p-5 bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl border border-amber-200 shadow-lg hover:shadow-2xl transition-all duration-300">
 
   <div className="text-sm font-semibold text-gray-600 mb-3">
-    <h5 className="text-center">Web Developer</h5><hr />
-    <span className="text-gray-700">📞 Contact:</span>
+    <h5 className="text-center bg-green-400 text-black text-2xl  ">Web Developer</h5><hr />
+    <span className="text-gray-700 ">📞 Contact:</span>
     <span className="text-gray-900 ml-2">
       +919463446881
     </span>
