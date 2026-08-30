@@ -1118,6 +1118,7 @@ const App = () => {
 
   <div className="text-sm font-semibold text-gray-600 mb-3">
     <span className="text-gray-700">📞 Contact:</span>
+    <span>Developer</span>
     <span className="text-gray-900 ml-2">
       +919463446881
     </span>
