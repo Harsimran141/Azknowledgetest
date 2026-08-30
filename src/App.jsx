@@ -1114,7 +1114,7 @@ const App = () => {
              hover:scale-105
              hover:shadow-xl"
 >
-<div className="w-full max-w-md mx-auto mt-4 p-5 bg-gradient-to-br from-amber-50 to-yellow-100 rounded-2xl border border-amber-200 shadow-lg hover:shadow-2xl transition-all duration-300">
+<div className="w-full max-w-md mx-auto mt-4 p-5 bg-gradient-to-br from-amber-50 to-yellow-800 rounded-2xl border border-amber-200 shadow-lg hover:shadow-2xl transition-all duration-300">
 
   <div className="text-sm font-semibold text-gray-600 mb-3">
     <h5 className="text-center bg-green-400 text-black text-2xl  ">Web Developer</h5><hr />
@@ -1128,7 +1128,7 @@ const App = () => {
     👤 Waris Singh
   </div>
 
-  <div className="text-sm text-red-600 font-semibold hover:text-red-800 transition cursor-pointer">
+  <div className="text-sm text-white font-semibold hover:text-green-800 transition cursor-pointer">
     📧 Asrboparai@gmail.com
   </div>
 
