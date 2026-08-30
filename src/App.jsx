@@ -955,89 +955,89 @@ const App = () => {
   {
       
       "question": "When reversing to couple a trailer, the fifth wheel opening must be in direct line with:",
-      "options": {
-        "a": "The trailer apron plate",
-        "b": "The master link",
-        "c": "The landing gear",
-        "d": "The trailer kingpin"
-      },
+      "options": [
+       "The trailer apron plate",
+        "The master link",
+         "The landing gear",
+        "The trailer kingpin"
+      ],
       "answer":"The trailer kingpin"
     },
     {
      
       "question": "What distance must you maintain between commercial motor vehicle travelling in the same direction on a highway?",
-      "options": {
-        "a": "30 metres (100 feet)",
-        "b": "60 metres (200 feet)",
-        "c": "90 metres (300 feet)",
-        "d": "150 metres (500 feet)"
-      },
+      "options": [
+      "30 metres (100 feet)",
+       "60 metres (200 feet)",
+        "90 metres (300 feet)",
+       "150 metres (500 feet)"
+      ],
       "answer": "60 metres (200 feet)",
     },
     {
     
       "question": "When driving larger vehicles you must always be aware of the vehicle's height and to ensure:",
-      "options": {
-        "a": "Adequate clearance is maintained at bridges and Overpasses.",
-        "b": "A proper daily inspection is performed.",
-        "c": "The proper license fees are Paid.",
-        "d": "Proper tires are on the vehicle."
-      },
+      "options": [
+     "Adequate clearance is maintained at bridges and Overpasses.",
+       "A proper daily inspection is performed.",
+   "The proper license fees are Paid.",
+        "Proper tires are on the vehicle."
+ ],
       "answer": "Adequate clearance is maintained at bridges and Overpasses.",
     },
     {
     
       "question": "A longer wheel base between the front wheels and the rear wheels of the vehicle creates:",
-      "options": {
-        "a": "More off-tracking.",
-        "b": "The same off-tracking.",
-        "c": "Less off-tracking.",
-        "d": "No change in off-tracking."
-      },
+      "options": [
+       "More off-tracking.",
+        "The same off-tracking.",
+        "Less off-tracking.",
+        "No change in off-tracking."
+      ],
       "answer": "More off-tracking.",
     },
     {
     
       "question": "Before moving the tractor to couple with the trailer you must:",
-      "options": {
-        "a": "Inspect fifth wheel, trailer couplers and connect.",
-        "b": "Listen for fifth wheel to latch into its locked position.",
-        "c": "Ensure fifth wheel sits above the kingpin.",
-        "d": "Ensure trailer lights are activated."
-      },
+      "options": [
+        "Inspect fifth wheel, trailer couplers and connect.",
+      "Listen for fifth wheel to latch into its locked position.",
+   "Ensure fifth wheel sits above the kingpin.",
+        "Ensure trailer lights are activated."
+      ],
       "answer": "Inspect fifth wheel, trailer couplers and connect.",
     },
     {
     
       "question": "Prior to coupling you should check to ensure:",
-      "options": {
-        "a": "Fifth wheel is lying flat and jaws are fully closed",
-        "b": "Jaws are fully closed",
-        "c": "The fifth wheel is lying flat",
-        "d": "The fifth wheel is tilted back and jaws are fully opened"
-      },
+      "options": [
+         "Fifth wheel is lying flat and jaws are fully closed",
+       "Jaws are fully closed",
+        "The fifth wheel is lying flat",
+       "The fifth wheel is tilted back and jaws are fully opened"
+      ],
       "answer": "The fifth wheel is tilted back and jaws are fully opened"
     },
     {
      
       "question": "A rear tire fails an inspection if the tread on two adjacent grooves anywhere on the tire are:",
-      "options": {
-        "a": "Less than 1.5 millimetres (0.06 inches)",
-        "b": "Less than 3 millimetres (0.12 inch)",
-        "c": "Less than 6 millimetres (0.24 inches)",
-        "d": "Less than 15 millimetres (0.59 inches)"
-      },
+      "options": [
+        "Less than 1.5 millimetres (0.06 inches)",
+       "Less than 3 millimetres (0.12 inch)",
+       "Less than 6 millimetres (0.24 inches)",
+        "Less than 15 millimetres (0.59 inches)"
+      ],
       "answer": "Less than 1.5 millimetres (0.06 inches)",
     },
     {
       
       "question": "In order to transport dangerous goods, you must:",
-      "options": {
-        "a": "No qualification is required, just be very careful",
-        "b": "Be trained and certified by your employer",
-        "c": "Hold a dangerous goods license or endorsement",
-        "d": "Be an employee of the manufacturer only"
-      },
+      "options": [
+       "No qualification is required, just be very careful",
+        "Be trained and certified by your employer",
+      "Hold a dangerous goods license or endorsement",
+     "Be an employee of the manufacturer only"
+      ],
       "answer": "Be trained and certified by your employer",
     }
   
