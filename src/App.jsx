@@ -408,7 +408,7 @@ const App = () => {
       "Own a commercial motor vehicle",
       "Be accompanied by a driver who is licensed to drive that vehicle"
     ],
-    answer: "Obtain permission from the ministry before making arrangements for instruction",
+    answer:"Be accompanied by a driver who is licensed to drive that vehicle",
   },
 
   {
@@ -952,16 +952,6 @@ const App = () => {
     ],
     answer: "The receiver"
   },
-
-
-
-
-
-
-
-
-
-
   {
       
       "question": "When reversing to couple a trailer, the fifth wheel opening must be in direct line with:",
