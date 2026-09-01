@@ -427,7 +427,7 @@ const App = () => {
   },
 
   {
-     image:"question38.jpg",
+     image:"question39.jpg",
     question: "This sign means:",
     options: [
       "Cement factory ahead",
