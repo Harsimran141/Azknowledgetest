@@ -740,7 +740,7 @@ const App = () => {
   },
 
   {
-     image:"question66.jpg",
+     image:"question67.jpg",
     question: "This sign means:",
     options: [
       "No truck parking in this lane",
