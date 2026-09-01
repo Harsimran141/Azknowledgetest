@@ -1230,30 +1230,67 @@ font-semibold transition-all duration-200
   </button>
 ))}
 
-     <button
-  className="w-full mt-6 bg-blue-600
-             hover:bg-blue-700 active:scale-95
-             text-white font-bold
-             py-3 rounded-xl shadow-md
-             transition-all duration-200"
-  onClick={() => {
-    if (!answered) return;
+<div className="flex gap-3 mt-6">
 
-    if (currentQuestion === Questions.length - 1) {
-      setQuizFinished(true);
-      return;
-    }
+  {/* Previous Button */}
+  <button
+    disabled={currentQuestion === 0}
+    onClick={() => {
+      if (currentQuestion === 0) return;
 
-    setCurrentQuestion(currentQuestion + 1);
-    SetselectOption(null);
-    SetCorrect(null);
-    Setanswered(false);
-  }}
->
-  {currentQuestion === Questions.length - 1
-    ? "Submit Test"
-    : "Next Question →"}
-</button>
+      setCurrentQuestion(currentQuestion - 1);
+      SetselectOption(null);
+      SetCorrect(null);
+      Setanswered(false);
+    }}
+    className={`w-1/2 py-3 rounded-xl font-bold shadow-md
+      transition-all duration-200
+      ${
+        currentQuestion === 0
+          ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+          : "bg-orange-500 hover:bg-orange-600 text-white active:scale-95"
+      }`}
+  >
+    ← Previous
+  </button>
+
+
+  {/* Next / Submit Button */}
+  <button
+    onClick={() => {
+
+      if (!answered) return;
+
+      if (currentQuestion === Questions.length - 1) {
+        setQuizFinished(true);
+        return;
+      }
+
+      setCurrentQuestion(currentQuestion + 1);
+
+      SetselectOption(null);
+      SetCorrect(null);
+      Setanswered(false);
+
+    }}
+    className="w-1/2 bg-blue-600
+               hover:bg-blue-700 active:scale-95
+               text-white font-bold
+               py-3 rounded-xl shadow-md
+               transition-all duration-200"
+  >
+    {currentQuestion === Questions.length - 1
+      ? "Submit Test"
+      : "Next Question →"}
+  </button>
+
+</div>
+
+
+
+
+
+
 <h1
   className={`text-4xl font-bold mt-5 ${
     correct === "Correct"
