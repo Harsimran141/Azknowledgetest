@@ -326,7 +326,7 @@ const App = () => {
   },
 
   {
-     image:"question29.jpg",
+     image:"question30.jpg",
     question: "This sign means:",
     options: [
       "Truck overturning",
@@ -862,7 +862,7 @@ const App = () => {
   },
 
   {
-    
+    image:"question77.jpg",
     question: "This sign means:",
     options: [
       "No trucks on route",
@@ -918,6 +918,7 @@ const App = () => {
   },
 
   {
+    image:"question83.jpg",
     question: "This sign means:",
     options: [
       "Truck green routes",
@@ -929,7 +930,7 @@ const App = () => {
   },
 
   {
-    sign_text: "TRUCKS ENTER INSPECTION STATION WHEN LIGHTS FLASHING",
+   image:"question84.jpg",
     question: "This sign means:",
     options: [
       "Drivers must not enter when lights flashing",
@@ -941,7 +942,7 @@ const App = () => {
   },
 
   {
-    sign_text: "MAXIMUM 00 00 tonnes",
+    image:"question85.jpg",
     question: "This sign means:",
     options: [
       "Report to truck inspection station if over given weight",
