@@ -125,6 +125,7 @@ const App = () => {
   },
 
   {
+    
     question: "The main reason you should check under the hood is:",
     options: [
       "To verify fluid levels",
@@ -136,7 +137,7 @@ const App = () => {
   },
 
   {
-    
+     image:"question12.jpg",
     question: "This sign means:",
     options: [
       "No truck parking",
@@ -313,6 +314,7 @@ const App = () => {
   },
 
   {
+    
     question: "When approaching an intersection and you notice the roadway beyond is blocked with traffic, you should:",
     options: [
       "Sound horn to warn vehicles ahead to move on",
@@ -324,6 +326,7 @@ const App = () => {
   },
 
   {
+     image:"question29.jpg",
     question: "This sign means:",
     options: [
       "Truck overturning",
@@ -412,6 +415,7 @@ const App = () => {
   },
 
   {
+    
     question: "When the driver of another vehicle is about to overtake and pass your vehicle, you must:",
     options: [
       "Move to the right and allow such vehicle to pass",
@@ -423,6 +427,7 @@ const App = () => {
   },
 
   {
+     image:"question38.jpg",
     question: "This sign means:",
     options: [
       "Cement factory ahead",
@@ -467,6 +472,7 @@ const App = () => {
   },
 
   {
+     
     question: "Which of the following is true when driving in a roundabout:",
     options: [
       "Requires a much faster speed",
@@ -478,6 +484,7 @@ const App = () => {
   },
 
   {
+     image:"question43.jpg",
     question: "This sign means:",
     options: [
       "Steep downgrade ahead",
@@ -610,6 +617,7 @@ const App = () => {
   },
 
   {
+   
     question: "What factor does not affect the maximum allowable gross weight of a commercial vehicle?",
     options: [
       "The weight allowed on the steering axle",
@@ -621,6 +629,7 @@ const App = () => {
   },
 
   {
+    image:"question56.jpg",
     question: "This sign means:",
     options: [
       "A watch for tipping vehicles",
@@ -731,6 +740,7 @@ const App = () => {
   },
 
   {
+     image:"question66.jpg",
     question: "This sign means:",
     options: [
       "No truck parking in this lane",
@@ -1182,17 +1192,20 @@ const App = () => {
     QUESTION
   </p>
 
-
-  {currentQuestion === 9 && (
-    <div className="flex justify-center mb-5">
-      <img
-        className="w-60 h-48 object-contain rounded-xl"
-        src={Questions[currentQuestion].image}
-        alt="Traffic sign"
-      />
+  {/* IMAGE */}
+  {Questions[currentQuestion].image && (
+    <div className="flex justify-center mb-6">
+      <div className="w-full max-w-md bg-gray-50 border-2 border-gray-200 rounded-2xl p-4 shadow-md">
+        <img
+          className="w-full h-56 sm:h-64 md:h-72 object-contain rounded-xl"
+          src={Questions[currentQuestion].image}
+          alt="Question image"
+        />
+      </div>
     </div>
   )}
 
+  {/* QUESTION TEXT */}
   <h2
     className="text-lg sm:text-xl md:text-2xl
                text-gray-800 font-bold leading-relaxed"
