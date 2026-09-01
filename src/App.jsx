@@ -102,7 +102,7 @@ const App = () => {
   },
 
   {
-    sign_text: "OVER 65 THIS LANE",
+   image:"question10.jpg",
     question: "This sign means:",
     options: [
       "No truck over 6.5 metres in length in this lane",
@@ -110,7 +110,7 @@ const App = () => {
       "This lane is a truck route",
       "No truck in this lane"
     ],
-    answer: "This lane is a truck route"
+    answer: "No truck over 6.5 metres in length in this lane",
   },
 
   {
@@ -1173,22 +1173,33 @@ const App = () => {
       </p>
     </div>
   </div>
-       <div
-    className="mt-6 bg-white rounded-2xl
-               p-5 shadow-md border border-orange-100"
+
+<div
+  className="mt-6 bg-white rounded-2xl
+             p-5 shadow-md border border-orange-100"
+>
+  <p className="text-sm font-bold text-orange-500 mb-2">
+    QUESTION
+  </p>
+
+  {/* ONLY QUESTION 10 IMAGE */}
+  {currentQuestion === 9 && (
+    <div className="flex justify-center mb-5">
+      <img
+        className="w-60 h-48 object-contain rounded-xl"
+        src={Questions[currentQuestion].image}
+        alt="Traffic sign"
+      />
+    </div>
+  )}
+
+  <h2
+    className="text-lg sm:text-xl md:text-2xl
+               text-gray-800 font-bold leading-relaxed"
   >
-    <p className="text-sm font-bold text-orange-500 mb-2">
-      QUESTION
-    </p>
-
-    <h2
-      className="text-lg sm:text-xl md:text-2xl
-                 text-gray-800 font-bold leading-relaxed"
-    >
-      {Questions[currentQuestion].question}
-    </h2>
-  </div>
-
+    {Questions[currentQuestion].question}
+  </h2>
+</div>
  <div className="flex flex-col gap-3 mt-5">
 
     {Questions[currentQuestion].options.map((items, index) => (
@@ -1225,14 +1236,14 @@ font-semibold transition-all duration-200
      ? "bg-red-500 border-red-600 text-white shadow-lg"
     : "bg-white border-gray-200 text-gray-800   hover:border-blue-500 hover:bg-blue-50 hover:translate-x-1"
 }`}
-  >
+  > 
     {items}
   </button>
 ))}
 
 <div className="flex gap-3 mt-6">
 
-  {/* Previous Button */}
+
   <button
     disabled={currentQuestion === 0}
     onClick={() => {
@@ -1255,7 +1266,7 @@ font-semibold transition-all duration-200
   </button>
 
 
-  {/* Next / Submit Button */}
+
   <button
     onClick={() => {
 
