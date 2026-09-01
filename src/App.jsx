@@ -1182,31 +1182,16 @@ const App = () => {
     QUESTION
   </p>
 
- 
- {currentQuestion === 9 && (
-  <div className="flex justify-center mb-6">
-    <img
-      className="
-        w-full
-        max-w-md
-        h-64
-        sm:h-72
-        object-contain
-        rounded-2xl
-        border-2
-        border-blue-200
-        bg-gray-50
-        p-3
-        shadow-lg
-        hover:shadow-xl
-        transition-all
-        duration-300
-      "
-      src={Questions[currentQuestion].image}
-      alt="Traffic sign"
-    />
-  </div>
-)}
+
+  {currentQuestion === 9 && (
+    <div className="flex justify-center mb-5">
+      <img
+        className="w-60 h-48 object-contain rounded-xl"
+        src={Questions[currentQuestion].image}
+        alt="Traffic sign"
+      />
+    </div>
+  )}
 
   <h2
     className="text-lg sm:text-xl md:text-2xl
