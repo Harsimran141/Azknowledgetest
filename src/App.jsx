@@ -1193,7 +1193,6 @@ const App = () => {
     QUESTION
   </p>
 
-  {/* IMAGE */}
   {Questions[currentQuestion].image && (
     <div className="flex justify-center mb-6">
       <div className="w-full max-w-md bg-gray-50 border-2 border-gray-200 rounded-2xl p-4 shadow-md">
@@ -1206,7 +1205,7 @@ const App = () => {
     </div>
   )}
 
-  {/* QUESTION TEXT */}
+ 
   <h2
     className="text-lg sm:text-xl md:text-2xl
                text-gray-800 font-bold leading-relaxed"
